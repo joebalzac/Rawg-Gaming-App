@@ -1,7 +1,10 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
+import { useState } from "react";
 
 function App() {
+  const [isColorModeDark, setIsColorModeDark] = useState(false);
+
   return (
     <Grid
       templateAreas={{
@@ -13,11 +16,11 @@ function App() {
         <NavBar />
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" bg="gold">
+        <GridItem area="aside">
           Aside
         </GridItem>
       </Show>
-      <GridItem area="main" bg="dodgerblue">
+      <GridItem area="main">
         Main
       </GridItem>
     </Grid>
